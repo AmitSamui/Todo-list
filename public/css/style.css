@@ -227,6 +227,7 @@
        width: 20%;
         font-size: 16px;
         padding: 0;
+        margin:0  30px 10px 0;
     }
     .right .list-form form input[type=text]{
         
@@ -234,6 +235,7 @@
       
         
     }
+    
     
 }
 
