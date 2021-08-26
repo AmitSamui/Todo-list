@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+.mx{
+    margin:0 10px;
+}
+.container{
+    background-image: url(resources/larm-rmah-5em1lVBmvw8-unsplash.jpg);
+    background-size: contain;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    
+}
+.left{
+    height: 100%;
+    flex:0.23;
+    background-color: rgba(0, 0, 0, 0.637);
+    border-radius: 0 12px 12px 0;
+}
+.left .header{
+    height: 3.5rem;
+    border-bottom: 2px solid #FFD500;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left .header .app-name{
+    color: #d4d4d4;
+    font-size: 22px;
+    font-weight: 600;
+}
+.left .time-section{
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left .time-section .date , .left .time-section .time {
+    display: flex;
+    color: #d4d4d4;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.left .list-names{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.left .list-names .list-item{
+    height: 40px;
+    width: 93%;
+    border-radius:6px ;
+    background-color: #FFD500;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 4px 0px;
+}
+
+ /* this is the right section */
+
+ .right{
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     flex-direction: column;
+     height: 100%;
+     flex: 0.77;
+ }
+ .right .top-instruction{
+     height: 3.5rem;
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+.right .top-instruction .list{
+    height: 100%;
+    padding-left:30px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d4d4d4;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.right .top-instruction .time-stamp{
+    height: 100%;
+    padding-right:30px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d4d4d4;
+    font-size: 16px;
+    font-weight: 400;
+}
+.right .body{
+    height: 80%;
+    width: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+    
+}
+.right .body ul{
+    display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.right .body ul li{
+    height: 40px;
+    width: 95%;
+    background-color: #101010;
+    border-radius: 5px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.right .body ul li p{
+    color: #d4d4d4;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 0 0 20px;
+}
+.right .body ul li .check-box{
+    width: 1.3em;
+    height: 1.3em;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    margin: 0 0 0 12px;
+    border: 2px solid #FFD500;
+    -webkit-appearance: none;
+    padding-right: 12px;
+    cursor: pointer;
+}
+.right .body ul li .check-box:checked  {
+    background-color:#FFD500;
+
+}
+.right .body ul li .check-box:checked  ~ p {
+    text-decoration: line-through;
+
+}
+.right .list-form{
+    height: 50px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.right .list-form form {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    -webkit-appearance: none;
+    align-items: center;
+}
+.right .list-form form input[type=text]{
+    height: 40px;
+    width: 85%;
+    margin:0 15px 0px 30px;
+    border-radius: 5px;
+    background-color: #101010;
+    border-style: none;
+    color: #d4d4d4;
+    font-size: 16px;
+    padding: 12px 20px;
+    
+}
+.right .list-form form button[type=submit]{
+    height: 40px;
+    width: 10%;
+    margin:0  30px 0 0;
+    background-color: #FFD500;
+    border-radius: 5px;
+    border: none;
+    color: #000000;
+    font-size: 20px;
+    line-height: 50%;
+    padding: 12px 20px;
+}
+
+@media (max-width : 844px) {
+    
+    .container{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: scroll;
+    }
+    .left{
+        width: 97%;
+        margin-bottom: 50px;
+        border-radius: 12px;
+        padding: 20px;
+    }
+    .right {
+        width: 100%;
+    }
+    .right .list-form form button[type=submit]{
+       width: 20%;
+        font-size: 16px;
+        padding: 0;
+    }
+    .right .list-form form input[type=text]{
+        
+        margin:0 15px 10px 30px;
+      
+        
+    }
+    
+}
+

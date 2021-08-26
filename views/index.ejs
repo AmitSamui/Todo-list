@@ -4,11 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>current day</title>
 </head>
 <body>
 
-    <h1><%= cDay %></h1>
+    <section class="container">
+        <div class="left">
+            <div class="header">
+                <p class="app-name">TODO LIST</p>
+            </div>
+            
+            <div class="time-section">
+                <div class="date mx">
+                    <%= cDay %>
+                </div>
+                <div class="time mx">
+                    <%= time %>
+                </div>
+            </div>
+            <div class="list-names">
+                <p class="list-item">New TODO list</p>
+                <!-- <p class="list-item">Second TODO list</p> -->
+            </div>
+            <div class="new-listitem-form">
+
+            </div>
+        </div>
+        <div class="right">
+            <div class="top-instruction">
+                <div class="list">New TODO list</div>
+                <div class="time-stamp">
+                    <%= cDay %>
+                </div>
+            </div>
+            <div class="body">
+                <ul>
+                    <% for(var i = 0 ; i<newListItem.length ; i++){   %>
+                        <li><input type="checkbox" class="check-box"><p><%= newListItem[i] %></p></li>
+                    <%  }  %>
+                </ul>
+            </div>
+            <div class="list-form">
+                <form action="/" method="post" >
+                    <input type="text" name="task" id="tasks" class="task-add" autocomplete="off">
+                    <button type="submit">add</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- <h1><%= cDay %></h1>
     <ul>
         <li>revision</li>
         <li>study</li>
@@ -19,13 +65,13 @@
         <li><%= newListItem[i] %></li>
     <%  }  %>
     
-    </ul>
+    </ul> -->
 
     
-    <form action="/" method="post">
+    <!-- <form action="/" method="post">
         <input type="text" name="task" id="tasks">
         <button type="submit">add</button>
-    </form>
+    </form> -->
 
 
 </body>
