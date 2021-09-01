@@ -15,7 +15,9 @@
                 </div>
             </div>
             <div class="list-names">
-                <p class="list-item">Today</p>
+                <p class="list-item">
+                    <%= listTitle %>
+                </p>
                 <!-- <p class="list-item">Second TODO list</p> -->
             </div>
             <div class="new-listitem-form">
@@ -24,7 +26,9 @@
         </div>
         <div class="right">
             <div class="top-instruction">
-                <div class="list">New TODO list</div>
+                <div class="list">
+                    <%= listTitle %>
+                </div>
                 <div class="time-stamp">
                     <%= cDay %>
                 </div>
@@ -40,7 +44,7 @@
                                     <%= list.name %>
                                 </p>
                             </li>
-                            <input type="hidden" name="listname" value="today"></input>
+                            <input type="hidden" name="listname" value="<%= listTitle %>"></input>
                         </form>
                         <% }) %>
 
@@ -50,12 +54,30 @@
             <div class="list-form">
                 <form action="/" method="post" class="form">
                     <input type="text" name="task" id="tasks" class="task-add" autocomplete="off">
-                    <button type="submit" value="today" name="listname">add</button>
+                    <button type="submit" value="<%= listTitle %>" name="listname">add</button>
                 </form>
             </div>
         </div>
     </section>
 
+    <!-- <h1><%= cDay %></h1>
+    <ul>
+        <li>revision</li>
+        <li>study</li>
+        <li>food</li>
+        
+
+    <% for(var i = 0 ; i<newListItem.length ; i++){   %>
+        <li><%= newListItem[i] %></li>
+    <%  }  %>
+    
+    </ul> -->
+
+
+    <!-- <form action="/" method="post">
+        <input type="text" name="task" id="tasks">
+        <button type="submit">add</button>
+    </form> -->
 
 
     <%- include("footer"); -%>
